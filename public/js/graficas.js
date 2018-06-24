@@ -144,8 +144,6 @@ var i=0;
 }
 
 
-
-
 function cambiar_fecha_grafica_citas(){
 
     var anio_sel=$("#anio_sel").val();
