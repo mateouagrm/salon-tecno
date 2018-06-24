@@ -35,3 +35,14 @@ Route::post('editarusuario', ['as' =>'editarusuario', 'uses' => 'UsuarioControll
 //Producto
 Route::get('listaproducto','ProductoController@listaproducto');
 Route::get('registrarproducto','ProductoController@productoget');
+
+
+
+//Estadisticas
+Route::get('/estadistica', 'EstadisticaController@lista');
+Route::get('listado_graficas', 'EstadisticaController@index');
+Route::get('grafica_registros/{anio}/{mes}', 'EstadisticaController@registros_mes');
+Route::get('listado_graficas_citas', 'EstadisticaController@citas');
+Route::get('listado_graficas_citas/{anio}/{mes}', 'EstadisticaController@citas_graficos');
+Route::get('listado_graficas_ventas', 'EstadisticaController@ventas');
+Route::get('listado_graficas_ventas/{anio}/{mes}', 'EstadisticaController@ventas_graficos');

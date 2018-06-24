@@ -10,7 +10,7 @@ class Producto extends Model
 
     protected $primaryKey='id_producto';
 
-    public $timestamps=false;
+    public $timestamps=true;
 
     protected $fillable=[
     
