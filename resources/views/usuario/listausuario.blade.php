@@ -54,5 +54,35 @@
 
 </div>
 
+
+
+<div id="posts" style="  position: fixed;
+        width: 250px;
+        height: 40px;
+        bottom: 0;
+        right: 10px;
+        background-color: #3b5e95;
+        color: white;
+        z-index: 1000;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 20px 20px 0 0;
+        cursor: pointer;">
+    <strong id="contador">
+
+    </strong>
+</div>
+
+
+@push('scripts')
+<script>
+    var url = 'conteo/listausuario';
+    $.get(url,function(resul){
+        var datos= jQuery.parseJSON(resul);
+       console.log(datos);
+        document.getElementById("contador").innerHTML = datos.cantidad  + '   visitas';
+    })
+</script>
+@endpush
   
 @endsection

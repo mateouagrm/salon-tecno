@@ -46,3 +46,10 @@ Route::get('listado_graficas_citas', 'EstadisticaController@citas');
 Route::get('listado_graficas_citas/{anio}/{mes}', 'EstadisticaController@citas_graficos');
 Route::get('listado_graficas_ventas', 'EstadisticaController@ventas');
 Route::get('listado_graficas_ventas/{anio}/{mes}', 'EstadisticaController@ventas_graficos');
+
+
+
+
+//contador de paginas
+
+Route::get('conteo/{nombre}', 'ContadorController@updateView');
